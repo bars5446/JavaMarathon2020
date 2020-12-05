@@ -1,7 +1,7 @@
 package day6;
 
 public class Airplane {
-    String producer;
+    private String producer;
     private int year;
     private int length;
     private int weight;

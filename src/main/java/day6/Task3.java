@@ -7,5 +7,4 @@ public class Task3 {
 
         teacher.evaluate(student);
     }
-
 }

@@ -34,12 +34,7 @@ public class Car {
     }
 
     public int yearDifference(int year) {
-        int yearDiff;
-        if (year > yearOfManufacture) {
-            yearDiff = year - yearOfManufacture;
-        } else {
-            yearDiff = yearOfManufacture - year;
-        }
-        return yearDiff;
+        year = Math.abs(yearOfManufacture - year);
+        return year;
     }
 }
