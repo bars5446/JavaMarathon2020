@@ -5,6 +5,7 @@ import java.util.Random;
 public class Task2 {
     public static void main(String[] args) {
         Random random = new Random();
+        Player.info();
         Player player_1 = new Player(random.nextInt(11) + 90);
         Player player_2 = new Player(random.nextInt(11) + 90);
         Player player_3 = new Player(random.nextInt(11) + 90);
