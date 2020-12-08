@@ -1,15 +1,15 @@
 package day9.Task1;
 
 public class Student extends Human {
-    private String GroupName;
+    private String groupName;
 
     public Student(String name, String groupName) {
         super(name);
-        GroupName = groupName;
+        this.groupName = groupName;
     }
 
     public String getGroupName() {
-        return GroupName;
+        return groupName;
     }
 
     @Override
