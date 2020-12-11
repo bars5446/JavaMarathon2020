@@ -2,14 +2,9 @@ package day11.task1;
 
 public class Courier implements Worker {
     private int salary;
-    private int salaryStatic;
+    private int salaryStatic = 100;
     private boolean isPayed;
     private Warehouse warehouse;
-
-    public Courier(int salaryStatic, Warehouse warehouse) {
-        this.salaryStatic = salaryStatic;
-        this.warehouse = warehouse;
-    }
 
     public Courier(Warehouse warehouse) {
         this.warehouse = warehouse;
@@ -32,7 +27,7 @@ public class Courier implements Worker {
     @Override
     public void doWork() {
         salary += salaryStatic;
-        warehouse.setCountDeliveredOrders();
+        warehouse.incrementDelivered();
     }
 
     @Override
