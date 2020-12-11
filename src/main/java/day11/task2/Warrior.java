@@ -1,14 +1,9 @@
 package day11.task2;
 
-public class Warrior extends Hero implements PhysAttack {
-    public Warrior(int health, int physDef, int magicDef, int physAtt, int magicAtt) {
-        super(health, physDef, magicDef, physAtt, magicAtt);
-    }
+public class Warrior extends Hero {
 
-    @Override
-    public void physicalAttack(Hero hero) {
-        hero.setHealth(hero.getHealth() - (getPhysAtt() - (getPhysAtt() * hero.getPhysDef() / 100)));
-        System.out.println(hero.toString());
+    public Warrior() {
+        super(80, 0, 30);
     }
 
     @Override
