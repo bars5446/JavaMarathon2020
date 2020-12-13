@@ -8,9 +8,7 @@ public class Task2 {
 
 
         for (int i = 0; i < 350; i++) {
-            if (i % 2 == 0 && (i > 0 && i < 30)) {
-                numList.add(i);
-            } if (i % 2 == 0 && i > 300) {
+            if ((i < 30 || i > 300) & i % 2 == 0 && i != 0) {
                 numList.add(i);
             }
         }
