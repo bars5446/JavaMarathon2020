@@ -2,7 +2,6 @@ package day14;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task1 {
@@ -14,15 +13,11 @@ public class Task1 {
         try {
             Scanner scanner = new Scanner(file);
             String[] numString = scanner.nextLine().split(" ");
-//            System.out.println(Arrays.toString(numString));
             int[] numInt = new int[10];
-//            System.out.println(Arrays.toString(numInt));
             int counter = 0;
             for (String num : numString) {
                 numInt[counter++] = Integer.parseInt(num);
-                if (numString.length < numInt.length) {
-                    throw new ArrayIndexOutOfBoundsException();
-                } else if (numString.length > numInt.length) {
+                if (numString.length != numInt.length) {
                     throw new ArrayIndexOutOfBoundsException();
                 }
             }

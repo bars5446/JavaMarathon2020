@@ -15,27 +15,21 @@ public class Task3 {
         List<Person> peopleList = new ArrayList<>();
         try {
             Scanner scanner1 = new Scanner(file);
-/*
-А тут обошлось одним сканером
- */
             while (scanner1.hasNextLine()) {
-                try {
-                    String[] numString = scanner1.nextLine().split(" ");
-                    int num = Integer.parseInt(numString[1]);
-                    if (num < 0) {
-                        throw new Exception();
-                    } else {
-                        peopleList.add(new Person(numString[0], num));
-                    }
-                } catch (Exception e) {
-                    peopleList = new ArrayList<>();
-                    System.out.println("Некорректный входной файл");
-                    break;
+                String[] numString = scanner1.nextLine().split(" ");
+                int num = Integer.parseInt(numString[1]);
+                if (num < 0) {
+                    throw new Exception();
+                } else {
+                    peopleList.add(new Person(numString[0], num));
                 }
             }
             scanner1.close();
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
+        } catch (Exception e) {
+            peopleList = new ArrayList<>();
+            System.out.println("Некорректный входной файл");
         }
         return peopleList;
     }
